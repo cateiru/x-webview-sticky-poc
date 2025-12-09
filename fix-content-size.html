@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, viewport-fit=cover" />
+    <title>X WebView Sticky PoC</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+        .sticky-container {
+            width: 100%;
+            height: 1000px;
+
+            background-color: aquamarine;
+        }
+        .sticky {
+            position: sticky;
+            -webkit-position: sticky;
+            top: 0;
+            padding: 16px;
+
+            background-color: #f16d6dff;
+        }
+        .non-sticky-container {
+            width: 100%;
+            height: 1000px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="non-sticky-container">
+        <h1>Non-Sticky Content</h1>
+    </div>
+    <div class="sticky-container">
+        <div class="sticky">This is sticky</div>
+        <h1>Sticky Content</h1>
+    </div>
+    <div class="non-sticky-container">
+        <h1>Non-Sticky Content</h1>
+    </div>
+</body>
+</html>
